@@ -1,0 +1,27 @@
+/*è¡¨æ ¼æ–‡å­—å±…ä¸­*/
+.cart-table {
+	text-align: center;
+}
+/*è¡¨å¤´æ–‡å­—å±…ä¸­*/
+.cart-table th {
+	text-align: center;
+}
+/*æ•°é‡æ•°å­—å±…ä¸­*/
+.cart-table input {
+	text-align: center;
+}
+/*åŠ å‡æŒ‰é’®å®½åº¦*/
+.num-btn {
+	width: 30px;
+}
+/*æ¯è¡Œé—´éš™*/
+.cart-table tbody tr {
+	border-top: 1px dashed #cccccc;
+}
+/*æ€»ä»·æ¡*/
+.total-bar {
+	margin: 20px 0;
+	background-color: #f0f7fe;
+	padding: 15px;
+	border-radius: 5px;
+}

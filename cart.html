@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <title>购物车</title>
+  <script src="js/jquery-1.9.1.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="css/layout.css" />
+	<link rel="stylesheet" type="text/css" href="css/top.css" />
+	<link rel="stylesheet" type="text/css" href="css/footer.css" />
+	<link rel="stylesheet" type="text/css" href="css/cart.css" />
+	<script src="js/cart.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="col-md-offset-1 col-md-10">
+          <div class="panel panel-primary">
+            <div class="panel-heading">
+              <p class="panel-title"><span class="fa fa-shopping-cart"></span> 购物车</p>
+            </div>
+            <div class="panel-body">
+              <form role="form">
+                <!--购物车表格开始-->
+                <table class="cart-table" width="100%">
+                  <thead>
+                    <tr>
+                      <th width="8%">
+                        <input type="checkbox" class="ckall" onclick="checkall(this)" />全选</th>
+                      <th width="110"></th>
+                      <th width="29%">商品</th>
+                      <th width="11%">单价</th>
+                      <th width="15%">数量</th>
+                      <th width="11%">金额</th>
+                      <th>操作</th>
+                    </tr>
+                  </thead>
+                  <tbody class="cart-body">
+                    <tr>
+                      <td>
+                        <input type="checkbox" class="ckitem" />
+                      </td>
+                      <td><img src="image/cart/collect.png" class="img-responsive" /></td>
+                      <td>联想(Lenovo)小新Air13 Pro 13.3英寸14.8mm超轻薄笔记本电脑</td>
+                      <td>¥<span id="goodsPrice1">5298</span></td>
+                      <td>
+                        <input type="button" value="-" class="num-btn" onclick="reduceNum(1)" />
+                        <input id="goodsCount1" type="text" size="2" readonly="readonly" class="num-text" value="1">
+                        <input class="num-btn" type="button" value="+" onclick="addNum(1)" />
+                      </td>
+                      <td><span id="goodsCast1"></span></td>
+                      <td>
+                        <input type="button" onclick="delCartItem(this)" class="cart-del btn btn-default btn-xs" value="删除" />
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <input type="checkbox" class="ckitem" />
+                      </td>
+                      <td><img src="image/cart/collect (1).png" class="img-responsive" /></td>
+                      <td>戴尔(DELL)XPS13-9360-R1609 13.3</td>
+                      <td>¥<span id="goodsPrice2">4988</span></td>
+                      <td>
+                        <input type="button" value="-" class="num-btn" onclick="reduceNum(2)" />
+                        <input id="goodsCount2" type="text" size="2" readonly="readonly" class="num-text" value="1">
+                        <input class="num-btn" type="button" value="+" onclick="addNum(2)" />
+                      </td>
+                      <td><span id="goodsCast2"></span></td>
+                      <td>
+                        <input type="button" onclick="delCartItem(this)" class="cart-del btn btn-default btn-xs" value="删除" />
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <input type="checkbox" class="ckitem" />
+                      </td>
+                      <td><img src="image/cart/collect (2).png" class="img-responsive" /></td>
+                      <td>戴尔(DELL)魔方15MF Pro-R2505TSS灵越</td>
+                      <td>¥<span id="goodsPrice3">4699</span></td>
+                      <td>
+                        <input type="button" value="-" class="num-btn" onclick="reduceNum(3)" />
+                        <input id="goodsCount3" type="text" size="2" readonly="readonly" class="num-text" value="1">
+                        <input class="num-btn" type="button" value="+" onclick="addNum(3)" />
+                      </td>
+                      <td><span id="goodsCast3"></span></td>
+                      <td>
+                        <input type="button" onclick="delCartItem(this)" class="cart-del btn btn-default btn-xs" value="删除" />
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+                <div class="total-bar">
+                  <a href="javascript:selDelCart()" class="cart-del-sel btn btn-default btn-xs">删除所选商品</a>
+                  <span class="pull-right">已选商品
+                  <span id="selectCount">0</span>件 总价¥
+                  <span id="selectTotal">0</span>元
+                  </span>
+                </div>
+                <div>
+                  <span class="pull-right">
+                  <input type="button" value="  结  算  " class="btn btn-primary btn-lg link-account" />
+                </span>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+</body>
+</html>
